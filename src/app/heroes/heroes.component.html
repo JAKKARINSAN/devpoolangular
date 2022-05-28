@@ -1,0 +1,19 @@
+<h4>My Heroes</h4>
+
+<ul class="list-group">
+  <li
+    class="list-group-item list-group-item-action"
+    *ngFor="let hero of heroes"
+    (click)="onSelectHero(hero)">
+    <span class="badge">{{ hero.id }}</span>
+    {{ hero.name }}
+  </li>
+</ul>
+
+<hr>
+
+<form [formGroup]="heroFormGroup">
+  <input type="text" formControlName="name" >
+</form>
+
+<hr>
